@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Locked</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">
+        body, html, body > div {
+            height: 100%;
+        }
+
+            body > div {
+                display: table;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+                body > div > div {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <div class="hero-unit">
+                <h1>Locked</h1>
+                <p>You need to unlock this application before usage!</p>
+                <p>
+                    @Html.ActionLink("Unlock", "Unlock", null, new { @class = "btn btn-primary btn-large" })
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
