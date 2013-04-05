@@ -33,9 +33,9 @@ namespace CedricApp.Controllers
 
             const string hash = "1gGA63tS8wJSRb/K6tDty97dN8g/GS4m1hQFPy9SD5A=";
             const string yourmsg = "iLhyYEO7VB3sid1NQJgkGBKxX+WiDbSSTziH67a0XTg=";    
-            const string data = msg;
+            const string data = "INSERT CODE HERE";
             
-            if (!key.Contains("|")) return RedirectToAction("Index");
+            if (!data.Contains("+")) return RedirectToAction("Index");
 
             var keyParts = key.Split('|');
             var text = DecryptStringFromBytes(Convert.FromBase64String(data), Convert.FromBase64String(keyParts[0]), Convert.FromBase64String(keyParts[1]));
