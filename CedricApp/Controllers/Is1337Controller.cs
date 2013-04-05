@@ -19,7 +19,6 @@ namespace CedricApp.Controllers
     public class Is1337Controller : Controller
     {
         
-        public string original;
         //
         // GET: /LeetController238/
 
@@ -28,7 +27,7 @@ namespace CedricApp.Controllers
             return View();
         }
 
-        public ActionResult Unlock()
+        public ActionResult Unlock( string original )
         {
             const string key = "KB1uR/RObxi4DjK6Vr/+8K1yQKpGFkEtF1VUNV1ndcE=|l3PjrQMJNHVKtCMJPcYugg==";
 
