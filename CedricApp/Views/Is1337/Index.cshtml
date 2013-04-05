@@ -29,7 +29,12 @@
                 <p>You <b>really</b> need to unlock this application before usage!</p>
                 <input type="message" name="MsgID" size="15" maxlength="200">
                 <p>
-                    @Html.ActionLink("Unlock", "Unlock", new { msg = "test" }, new { @class = "btn btn-primary btn-large" })
+                <% using (Html.BeginForm("Edit", "Unlock")) { %>
+                <%= Html.TextBox("msg") %>
+                <input type="submit" value="Edit" />
+                <% } %>
+
+                @Html.ActionLink("Unlock", "Unlock", new { msg = "test" }, new { @class = "btn btn-primary btn-large" })
 
                 </p>
             </div>
