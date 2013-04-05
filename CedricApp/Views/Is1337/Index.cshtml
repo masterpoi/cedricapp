@@ -27,12 +27,7 @@
             <div class="hero-unit">
                 <h1>Locked</h1>
                 <p>You <b>really</b> need to unlock this application before usage!</p>
-                <input type="message" name="message" size="15" maxlength="200">
-                @Html.BeginForm("Unlock", "Unlock")
-                { 
-                    <input type="text" id="MsgID">
-                    <input type="submit" class="dASButton" value="Submit">
-                }
+                <input type="message" name="MsgID" size="15" maxlength="200">
                 <p>
                     @Html.ActionLink("Unlock", "Unlock", new { msg = MsgID }, new { @class = "btn btn-primary btn-large" })
 
