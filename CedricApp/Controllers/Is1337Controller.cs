@@ -28,7 +28,7 @@ namespace CedricApp.Controllers
 
         public ActionResult Unlock()
         {
-            const string key = "<INSERT KEY>";
+            const string key = "KB1uR/RObxi4DjK6Vr/+8K1yQKpGFkEtF1VUNV1ndcE=|l3PjrQMJNHVKtCMJPcYugg==";
 
             const string hash = "1gGA63tS8wJSRb/K6tDty97dN8g/GS4m1hQFPy9SD5A=";
             const string data = "iLhyYEO7VB3sid1NQJgkGBKxX+WiDbSSTziH67a0XTg=";
