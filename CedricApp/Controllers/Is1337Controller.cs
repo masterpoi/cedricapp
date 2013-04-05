@@ -38,8 +38,9 @@ namespace CedricApp.Controllers
             var keyParts = key.Split('|');
             var text = DecryptStringFromBytes(Convert.FromBase64String(data), Convert.FromBase64String(keyParts[0]), Convert.FromBase64String(keyParts[1]));
             const string original = "Gelukkige Verjaardag!";
-            byte[] encrypted = EncryptStringToBytes(Convert.FromBase64String(original), Convert.FromBase64String(keyParts[0]), Convert.FromBase64String(keyParts[1]));
-            return View( new UnlockViewModel { Message = encrypted });
+            byte[] encrypted = EncryptStringToBytes(original, Convert.FromBase64String(keyParts[0]), Convert.FromBase64String(keyParts[1]));
+            text = Convert.ToBase64String(encrypted);
+            return View( new UnlockViewModel { Message = text });
 
             if (hash.Equals(Convert.ToBase64String((new SHA256Managed()).ComputeHash(Encoding.ASCII.GetBytes(text)))))
             {
